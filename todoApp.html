@@ -12,17 +12,24 @@
   <script>
 
     var todos = [
-      {todoText: 'Item 1', completed: false}
-      {todoText: 'Item 1', completed: false}
+      {todoText: 'Item 1', completed: false},
+      {todoText: 'Item 1', completed: false},
       {todoText: 'Item 1', completed: false}
     ];
 
     console.log(todos);
 
-    function add(newTodoText){
-      todos.push({todoText: newTodoText, completed: false});
+    function add(initialTodoText){
+      todos.push({todoText: initialTodoText, completed: false});
       console.log(todos);
     }
+
+    function edit(position, newTodoText){
+      todos[position].todoText = newTodoText;
+      console.log(todos);
+    }
+
+    
 
   </script>
 </body>

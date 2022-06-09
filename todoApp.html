@@ -19,7 +19,11 @@
 
     console.log(todos);
 
-    
+    function add(newTodoText){
+      todos.push({todoText: newTodoText, completed: false});
+      console.log(todos);
+    }
+
   </script>
 </body>
 </html>

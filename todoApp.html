@@ -53,7 +53,7 @@
 
 //               //Version 3
 
-// // [] We should Initialize the todos variable with objects
+// // [x] We should Initialize the todos variable with objects
 //   var todos = [
 //     {todoText:"Item 1", completed:false},
 //     {todoText:"Item 2", completed:false},
@@ -66,33 +66,52 @@
 //     console.log(todos);
 //   }
 
-// // [] The edit function should edit objects
+// // [x] The edit function should edit objects
 //   function editTodo(position, newTodo){
 //     todos[position].todoText = newTodo;
 //     console.log(todos);
 //   }
 
           // Version 4
-// [] It should have a function to Toggle a Todo
   
-var todos = [
+// var todos = [
+//     {todoText:"Item 1", completed:false},
+//     {todoText:"Item 2", completed:false},
+//     {todoText:"Item 3", completed:false}
+//   ];
+
+// [x] It should have a function to Toggle a Todo
+
+// function toggle(position){
+//   if (todos[position].completed === true){
+//   todos[position].completed = false;
+// } else {
+//   todos[position].completed = true;
+// }
+//   console.log(todos);
+// }
+
+          // Version 5
+
+  var todos = [
     {todoText:"Item 1", completed:false},
     {todoText:"Item 2", completed:false},
     {todoText:"Item 3", completed:false}
   ];
 
+// // [] It should have a function for displaying todos.
+//   function displayTodos(){
+//     console.log(todos);
+//   }
 
-function toggle(position){
-  if (todos[position].completed === true){
-  todos[position].completed = false;
-} else {
-  todos[position].completed = true;
-}
-  console.log(todos);
-}
-
-
-
+// [] displayTodos should have show the todoText and completetd properties
+  
+  function displayTodos(){
+    for (var i = 0; i < todos.length; i++){
+    console.log(todos[i]);
+    }
+  }
+  
   </script>
 </body>
 </html>

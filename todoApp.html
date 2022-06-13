@@ -51,26 +51,47 @@
 //     }
 
 
-              //Version 3
+//               //Version 3
 
-// [] We should Initialize the todos variable with objects
-  var todos = [
+// // [] We should Initialize the todos variable with objects
+//   var todos = [
+//     {todoText:"Item 1", completed:false},
+//     {todoText:"Item 2", completed:false},
+//     {todoText:"Item 3", completed:false}
+//   ];
+
+// // [X] The add function should add objects
+//   function addTodo(newTodo){
+//     todos.push({todoText:newTodo, completed: false});
+//     console.log(todos);
+//   }
+
+// // [] The edit function should edit objects
+//   function editTodo(position, newTodo){
+//     todos[position].todoText = newTodo;
+//     console.log(todos);
+//   }
+
+          // Version 4
+// [] It should have a function to Toggle a Todo
+  
+var todos = [
     {todoText:"Item 1", completed:false},
     {todoText:"Item 2", completed:false},
     {todoText:"Item 3", completed:false}
   ];
 
-// [X] The add function should add objects
-  function addTodo(newTodo){
-    todos.push({todoText:newTodo, completed: false});
-    console.log(todos);
-  }
 
-// [] The edit function should edit objects
-  function editTodo(position, newTodo){
-    todos[position].todoText = newTodo;
-    console.log(todos);
-  }
+function toggle(position){
+  if (todos[position].completed === true){
+  todos[position].completed = false;
+} else {
+  todos[position].completed = true;
+}
+  console.log(todos);
+}
+
+
 
   </script>
 </body>

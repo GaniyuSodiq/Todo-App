@@ -9,22 +9,46 @@
 <body>
   <script>
 
-                //VERSION 1
+    //             //VERSION 1
 
-    //[X] It should have a place to store Todos
-    var todos = ['Item 1', 'Item 2', 'Item 3'];
+    // //[X] It should have a place to store Todos
+    // var todos = ['Item 1', 'Item 2', 'Item 3'];
 
-    //[X] It should have a way to display Todos
-    console.log(todos);
+    // //[X] It should have a way to display Todos
+    // console.log(todos);
 
-    //[X] It should have a way to add a Todo
-    todos.push('Item 4');
+    // //[X] It should have a way to add a Todo
+    // todos.push('Item 4');
 
-    //[X] It should have a way to edit a Todo
-    todos[0]='Item 1 edited';
+    // //[X] It should have a way to edit a Todo
+    // todos[0]='Item 1 edited';
 
-    //[x] It should have a way to remove a Todo
-    todos.splice(1, 1);
+    // //[x] It should have a way to remove a Todo
+    // todos.splice(1, 1);
+
+
+
+                  //Version 2
+
+    var todos =  ['Item 1', 'Item 2', 'Item 3'];
+
+// [] It should have a function to add a Todo
+    function addTodo(newTodo){
+      todos.push(newTodo);
+      console.log(todos);
+    }
+  
+// [] It should have a function to edit a Todo
+    function editTodo(position, newTodo){
+      todos[position] = newTodo;
+      console.log(todos);
+    }
+
+// [] It should have a function to remove a Todo
+    function removeTodo(position){
+      todos.splice(position, 1);
+      console.log(todos);
+    }
 
   </script>
 </body>

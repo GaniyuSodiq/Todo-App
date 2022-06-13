@@ -91,7 +91,28 @@
 //   console.log(todos);
 // }
 
-          // Version 5
+//           // Version 5
+
+//   var todos = [
+//     {todoText:"Item 1", completed:false},
+//     {todoText:"Item 2", completed:false},
+//     {todoText:"Item 3", completed:false}
+//   ];
+
+// // // [] It should have a function for displaying todos.
+// //   function displayTodos(){
+// //     console.log(todos);
+// //   }
+
+// // [] displayTodos should have show the todoText and completetd properties
+  
+//   function displayTodos(){
+//     for (var i = 0; i < todos.length; i++){
+//     console.log(todos[i]);
+//     }
+//   }
+
+                // Version 6
 
   var todos = [
     {todoText:"Item 1", completed:false},
@@ -99,18 +120,59 @@
     {todoText:"Item 3", completed:false}
   ];
 
-// // [] It should have a function for displaying todos.
-//   function displayTodos(){
-//     console.log(todos);
-//   }
+      function displayTodos(){
+        for (var i = 0; i < todos.length; i++){
+        console.log(todos[i]);
+        }
+      }
 
-// [] displayTodos should have show the todoText and completetd properties
+  function addTodo(newTodo){
+    todos.push({todoText:newTodo, completeted: false});
+    displayTodos();
+  }
+
+// [] It should have a function for toggling a todo.
+  function toggle(position){
+    if (todos[position].completed === true){
+      todos[position].completed = false;
+    }else {
+      todos[position].completed = true;
+    }
+    displayTodos();
+  }
+ 
+
+// [] It should have a function for toggling all todos.
   
-  function displayTodos(){
+  
+
+  function toggleAll(){
+    
+    var completedTodos = 0; 
+
     for (var i = 0; i < todos.length; i++){
-    console.log(todos[i]);
+    if (todos[i].completed === true){
+      completedTodos++;
     }
   }
+
+  if (completedTodos === todos.length){
+    for (var i = 0; i < todos.length; i++){
+      todos[i].completed = false;
+    } 
+  }else{
+    for (var i = 0; i < todos.length; i++){
+      todos[i].completed = true;
+    } 
+  }
+  displayTodos();
+}
+
+// [] if everything is false ==> change everything to true.
+
+// [] if everything is true ==> change everything to false.
+
+// [] if mixed ==> change everything to true.
   
   </script>
 </body>

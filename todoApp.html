@@ -146,33 +146,60 @@
   
   
 
-  function toggleAll(){
-    
-    var completedTodos = 0; 
+//   function toggleAll(){
 
-    for (var i = 0; i < todos.length; i++){
-    if (todos[i].completed === true){
-      completedTodos++;
-    }
-  }
+//     var completedTodos = 0; 
 
-  if (completedTodos === todos.length){
-    for (var i = 0; i < todos.length; i++){
-      todos[i].completed = false;
-    } 
-  }else{
-    for (var i = 0; i < todos.length; i++){
-      todos[i].completed = true;
-    } 
-  }
-  displayTodos();
-}
+//     for (var i = 0; i < todos.length; i++){
+//     if (todos[i].completed === true){
+//       completedTodos++;
+//     }
+//   }
+
+//   if (completedTodos === todos.length){
+//     for (var i = 0; i < todos.length; i++){
+//       todos[i].completed = false;
+//     } 
+//   }else{
+//     for (var i = 0; i < todos.length; i++){
+//       todos[i].completed = true;
+//     } 
+//   }
+//   displayTodos();
+// }
 
 // [] if everything is false ==> change everything to true.
 
 // [] if everything is true ==> change everything to false.
 
 // [] if mixed ==> change everything to true.
+
+function weirdToggleAll() {
+  var completedTodos = 0;
+  var allCompleted = true;
+
+  for (var i = 0; i < todos.length; i++) {
+    if (todos[i].completed !== false) {
+      completedTodos++;
+    }
+
+    if (completedTodos !== i + 1) {
+      allCompleted = false;
+    }
+  }
+
+  if (allCompleted === true) {
+    for (var i = 0; i < todos.length; i++) {
+      todos[i].completed = false;
+    }
+  } else {
+    for (var i = 0; i < todos.length; i++) {
+      todos[i].completed = true;  
+    }
+  }
+
+  displayTodos();
+}
   
   </script>
 </body>
